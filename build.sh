@@ -134,10 +134,6 @@ useAroma() {
 
 }
 
-
-echo " "
-echo " "
-echo " "
 echo " "
 echo " "
 echo -e "\e[1;92m--= \e[1;95mWelcome to the $ROM_NAME build script\e[1;92m =--"
@@ -145,10 +141,7 @@ echo -e "\e[0m "
 echo " "
 echo -e "\e[1;96mPlease make your selections carefully"
 echo -e "\e[0m "
-echo " "
 . build/envsetup.sh > /dev/null
-echo " " 
-echo " "
 select build in "Deep clean (inc. ccache)" "Build ROM" "Add Aroma Installer to ROM" "Refresh manifest,repo sync and upstream merge" "Deep Clean,Refresh Build,Build,No Aroma" "Deep Clean,Refresh Build,Build,Add Aroma"    "Exit"; do
 	case $build in
 		"Deep clean (inc. ccache)" ) deepClean; anythingElse; break;;
