@@ -277,7 +277,7 @@ endif
 DEVICE_PACKAGE_OVERLAYS += vendor/rr/overlay/common
 
 PRODUCT_VERSION = 15.1
-RR_VERSION := PalmProject-O-v$(PRODUCT_VERSION)-$(shell date +%Y%m%d)-$(RR_BUILD)
+RR_VERSION := PalmProject-Oreo-$(PRODUCT_VERSION)-$(shell date +%Y%m%d)-$(RR_BUILD)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.rr.version=$(RR_VERSION) \
