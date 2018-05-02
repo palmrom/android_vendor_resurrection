@@ -135,9 +135,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider \
     OmniJaws \
-    OmniStyle \
-    ResurrectionOTA \
-    ResurrectionStats
+    OmniStyle
 
 # Berry styles
 PRODUCT_PACKAGES += \
