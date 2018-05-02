@@ -263,15 +263,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
+
 PRODUCT_PACKAGES += \
     procmem \
     procrank
 
-# Conditionally build in su
-ifeq ($(WITH_SU),true)
-PRODUCT_PACKAGES += \
-    su
-endif
 endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/rr/overlay/common
