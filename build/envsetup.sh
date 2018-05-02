@@ -1,3 +1,4 @@
+export RR_BUILDTYPE=Unofficial
 function __print_lineage_functions_help() {
 cat <<EOF
 Additional LineageOS functions:
