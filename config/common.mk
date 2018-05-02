@@ -112,7 +112,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Trebuchet \
     LockClock \
-    Updater \
     SnapdragonCamera2 \
     WallpaperPicker \
     WeatherProvider \
