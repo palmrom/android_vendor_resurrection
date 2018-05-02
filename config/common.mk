@@ -103,19 +103,6 @@ ifeq ($(WITH_TWRP),true)
 include vendor/rr/config/twrp.mk
 endif
 
-# Bootanimation
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-# determine the smaller dimension
-TARGET_BOOTANIMATION_SIZE := $(shell \
-  if [ "$(TARGET_SCREEN_WIDTH)" -lt "$(TARGET_SCREEN_HEIGHT)" ]; then \
-    echo $(TARGET_SCREEN_WIDTH); \
-  else \
-    echo $(TARGET_SCREEN_HEIGHT); \
-  fi )
-
-# get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,,$(shell ls -1 vendor/rr/prebuilt/common/bootanimation | sort -rn))
-
 # find the appropriate size and set
 define check_and_set_bootanimation
 $(eval TARGET_BOOTANIMATION_NAME := $(shell \
