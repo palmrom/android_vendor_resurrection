@@ -103,22 +103,6 @@ ifeq ($(WITH_TWRP),true)
 include vendor/rr/config/twrp.mk
 endif
 
-# find the appropriate size and set
-define check_and_set_bootanimation
-$(eval TARGET_BOOTANIMATION_NAME := $(shell \
-  if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then \
-    if [ "$(1)" -le "$(TARGET_BOOTANIMATION_SIZE)" ]; then \
-      echo $(1); \
-      exit 0; \
-    fi;
-  fi;
-  echo $(TARGET_BOOTANIMATION_NAME); ))
-endef
-$(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
-
-PRODUCT_COPY_FILES += vendor/rr/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
-endif
-
 # Required rr packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
